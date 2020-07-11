@@ -1,21 +1,14 @@
 function rot13(str) {
-  let testArray = str.split("");
-  //test and replace!
+  const testArray = str.split("");
   for (let pos = 0; pos < testArray.length; pos++) {
-    if (testArray[pos].charCodeAt() < 65) {
+    if (testArray[pos].charCodeAt() < 65 || testArray[pos].charCodeAt() > 90) {
       continue;
     }
-    if (testArray[pos].charCodeAt() > 90) {
-      continue;
-    }
-    let value = testArray[pos].charCodeAt() + 13;
-    if (value > 90) {
-      value = value - 26;
-    }
-    testArray.splice(pos, 1, String.fromCharCode(value));
+    let value =
+      testArray[pos].charCodeAt() + 13 > 90
+        ? testArray[pos].charCodeAt() - 13
+        : testArray[pos].charCodeAt() + 13;
+    testArray[pos] = String.fromCharCode(value);
   }
-  //restring
-  let newstring = testArray.join("");
-  console.log(newstring);
-  return newstring;
+  return testArray.join("");
 }

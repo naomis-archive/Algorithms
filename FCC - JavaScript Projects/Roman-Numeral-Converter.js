@@ -1,58 +1,25 @@
-//only works up to 3999
 function convertToRoman(num) {
-  let roman = "";
-  while (num >= 1000) {
-    roman = roman + "M";
-    num = num - 1000;
+  const converter = {
+    M: 1000,
+    CM: 900,
+    D: 500,
+    CD: 400,
+    C: 100,
+    XC: 90,
+    L: 50,
+    XL: 40,
+    X: 10,
+    IX: 9,
+    V: 5,
+    IV: 4,
+    I: 1,
+  };
+  let result = "";
+  for (let i = 0; i < Object.keys(converter).length; i++) {
+    while (num >= Object.values(converter)[i]) {
+      result = result + Object.keys(converter)[i];
+      num = num - Object.values(converter)[i];
+    }
   }
-  while (num >= 900) {
-    roman = roman + "CM";
-    num = num - 900;
-  }
-  while (num >= 500) {
-    roman = roman + "D";
-    num = num - 500;
-  }
-  while (num >= 400) {
-    roman = roman + "CD";
-    num = num - 400;
-  }
-  while (num >= 100) {
-    roman = roman + "C";
-    num = num - 100;
-  }
-  while (num >= 90) {
-    roman = roman + "XC";
-    num = num - 90;
-  }
-  while (num >= 50) {
-    roman = roman + "L";
-    num = num - 50;
-  }
-  while (num >= 40) {
-    roman = roman + "XL";
-    num = num - 40;
-  }
-  while (num >= 10) {
-    roman = roman + "X";
-    num = num - 10;
-  }
-  while (num >= 9) {
-    roman = roman + "IX";
-    num = num - 9;
-  }
-  while (num >= 5) {
-    roman = roman + "V";
-    num = num - 5;
-  }
-  while (num >= 4) {
-    roman = roman + "IV";
-    num = num - 4;
-  }
-  while (num >= 1) {
-    roman = roman + "I";
-    num = num - 1;
-  }
-  console.log(roman);
-  return roman;
+  return result;
 }
