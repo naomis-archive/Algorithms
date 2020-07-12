@@ -1,3 +1,4 @@
+//find the sum of all odd Fibonacci numbers <= num
 function sumFibs(num) {
   let sum = 2,
     first = 1,
@@ -7,7 +8,7 @@ function sumFibs(num) {
     first = second;
     second = next;
     next = first + second;
-    if (next % 2 !== 0) sum += next;
+    if (second % 2 !== 0) sum += second;
   }
-  return sum - next;
+  return sum;
 }
