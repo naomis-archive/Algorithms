@@ -1,6 +1,6 @@
 # JavaScript Algorithms #
 
-These are various algorithms I've written in JavaScript.
+These are various algorithms I've written.
 
 ## Basic / Intermediate Algorithms ##
 
@@ -10,7 +10,7 @@ These are some solutions for FCC challenges - I gave myself two rules:
 
 ## JavaScript Projects ##
 
-These are the solutions for the certification projects. 
+These are the solutions for the FCC certification projects. 
 
 ## Feedback, Bugs, and Contributions
 
