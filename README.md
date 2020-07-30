@@ -1,4 +1,4 @@
-# JavaScript Algorithms #
+# Algorithms #
 
 These are various algorithms I've written.
 
