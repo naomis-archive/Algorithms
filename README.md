@@ -2,6 +2,10 @@
 
 These are various algorithms I've written.
 
+## Live Version
+
+There is currently not a deployment for this page.
+
 ## Basic / Intermediate Algorithms ##
 
 These are some solutions for FCC challenges - I gave myself two rules:
